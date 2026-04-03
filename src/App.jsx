@@ -4,9 +4,6 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Cart from './pages/Cart'
-import Checkout from './pages/Checkout'
-import ProductDetail from './pages/productDetail'
-import Categories from './components/Categories'
 import SignUp from './pages/SignUp'
 import Account from './pages/Account'
 import Verify from './pages/Verify'
@@ -46,18 +43,11 @@ const router = createBrowserRouter([
       </div>
   },
   {
-    path: '/checkout',
-    element:
-      <div>
-        <Checkout />
-      </div>
-  },
-  {
     path: '/productDetail',
     element:
       <div>
         <Navbar />
-        <ProductDetail />
+
       </div>
   },
   {
