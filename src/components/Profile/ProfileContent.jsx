@@ -15,11 +15,11 @@ const ProfileContent = () => {
         email: 'Umaimafl030@gmail.com',
         phone: '0316-4567890',
         role: 'Donor',
-        country: 'Pakistan',
-        city: 'Lahore,Punjab',
+        country: 'India',
+        city: 'Mumbai,Maharashtra',
     });
     const { user } = useSelector(store => store.user)
-    const char = (s)=>{
+    const char = (s) => {
         s.charAt(0)
     }
 

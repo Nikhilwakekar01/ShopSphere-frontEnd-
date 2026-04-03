@@ -70,7 +70,7 @@ const SideBar = ({ activeTab, setActiveTab }) => {
                         <p className="text-sm text-muted-foreground truncate">{user.role}</p>
                     </div>
                 </div>
-                <p className="text-xs text-muted-foreground">Lahore, Punjab Pakistan</p>
+                <p className="text-xs text-muted-foreground">Mumbai, Punjab Maharashtra</p>
             </div>
 
             <nav className="p-4">
