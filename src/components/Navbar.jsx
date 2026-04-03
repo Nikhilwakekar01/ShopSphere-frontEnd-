@@ -6,7 +6,7 @@ import { VscAccount } from "react-icons/vsc";
 import { TiThMenu } from "react-icons/ti";
 import Categories from './Categories';
 import Menu from './Menu';
-import Home from '../pages/home';
+import Home from '../pages/Home';
 import { Link, NavLink } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import Account from '../pages/Account';
