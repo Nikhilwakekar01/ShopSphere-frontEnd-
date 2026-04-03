@@ -29,7 +29,7 @@ const router = createBrowserRouter([
     path: "/account",
     element:
       <div>
-
+        <Account />
         <SignUp />
       </div>
   },
@@ -39,14 +39,6 @@ const router = createBrowserRouter([
       <div>
         <Navbar />
         <Cart />
-
-      </div>
-  },
-  {
-    path: '/productDetail',
-    element:
-      <div>
-        <Navbar />
 
       </div>
   },
