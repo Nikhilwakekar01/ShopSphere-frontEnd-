@@ -7,17 +7,17 @@ import { useDispatch } from 'react-redux'
 import { setUser } from '@/redux/userSlice'
 
 const LogIn = () => {
-  
+
   const [showPassword, setShowPassword] = useState(false)
-  const[login,isLogin] = useState(false)
+  const [login, isLogin] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
- 
+
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
-    
+
     email: "",
     password: "",
-    
+
   })
   const navigate = useNavigate()
   const dispatch = useDispatch()
@@ -30,40 +30,40 @@ const LogIn = () => {
     }))
   }
 
-   const handleToggle = () => {
-        // setIsSignUp(!isSignUp)
-        // <LogIn/>
-        navigate('/account')
-        setFormData({
-            
-            email: "",
-            password: "",
-            
-        })
-        setShowPassword(false)
-        setShowConfirmPassword(false)
-    }
+  const handleToggle = () => {
+    // setIsSignUp(!isSignUp)
+    // <LogIn/>
+    navigate('/account')
+    setFormData({
 
- 
+      email: "",
+      password: "",
+
+    })
+    setShowPassword(false)
+    setShowConfirmPassword(false)
+  }
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log("Form submitted:", {isLogin, formData })
+    console.log("Form submitted:", { isLogin, formData })
     console.log("hello ");
 
     try {
       setLoading(true)
-      const res = await axios.post('http://localhost:5000/api/login', formData, {
+      const res = await axios.post('https://shopsphere-backend-w8hw.onrender.com/api/login', formData, {
         headers: {
           "content-Type": "application/json"
         }
       })
       if (res.data.success) {
-        
+
         toast.success(res.data.message)
         dispatch(setUser(res.data.user))
-        localStorage.setItem('accessToken',res.data.accessToken)
-        
+        localStorage.setItem('accessToken', res.data.accessToken)
+
         setTimeout(() => {
           navigate('/')
         }, 1000);
@@ -208,7 +208,7 @@ const LogIn = () => {
 
             {/* Toggle Text */}
             <p className="text-center text-sm text-gray-600">
-              Don't have an account? 
+              Don't have an account?
               <button
                 type="button"
                 onClick={handleToggle}

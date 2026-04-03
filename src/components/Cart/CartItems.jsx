@@ -70,7 +70,7 @@ export default function CartItems() {
   useEffect(() => {
     const getCart = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/getCart", {
+        const res = await axios.get("https://shopsphere-backend-w8hw.onrender.com/api/getCart", {
           headers: {
             Authorization: `Bearer ${accessToken}`
           }

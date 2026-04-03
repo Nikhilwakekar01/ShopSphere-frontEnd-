@@ -49,7 +49,7 @@ const AuthCard = () => {
 
         try {
             setLoading(true)
-            const res = await axios.post('http://localhost:5000/api/register', formData, {
+            const res = await axios.post('https://shopsphere-backend-w8hw.onrender.com/api/register', formData, {
                 headers: {
                     "content-Type": "application/json"
                 }

@@ -29,7 +29,7 @@ const SideBar = ({ activeTab, setActiveTab }) => {
         e.preventDefault()
 
         try {
-            const res = await axios.post('http://localhost:5000/api/logout', {}, {
+            const res = await axios.post('https://shopsphere-backend-w8hw.onrender.com/api/logout', {}, {
                 headers: {
                     Authorization: `Bearer ${accessToken}`
                 }

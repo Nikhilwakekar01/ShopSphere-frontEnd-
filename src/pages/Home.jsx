@@ -11,7 +11,7 @@ const Home = () => {
   useEffect(() => {
     const handleGetProduct = async (req, res) => {
       try {
-        const res = await axios.get('http://localhost:5000/api/getProduct')
+        const res = await axios.get('https://shopsphere-backend-w8hw.onrender.com/api/getProduct')
         setProducts(res.data.products)
       } catch (error) {
         console.log(error.response?.data);
@@ -29,7 +29,7 @@ const Home = () => {
 
   const handleAddToCart = async (productId) => {
     try {
-      const res = await axios.post('http://localhost:5000/api/addToCart', { productId }, {
+      const res = await axios.post('https://shopsphere-backend-w8hw.onrender.com/api/addToCart', { productId }, {
         headers: {
           Authorization: `Bearer ${accessToken}`
         }
